@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-display: optional;
+    color: #444;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    background: #ececec;
+    position: relative;
+}
+
+.main {
+    position: absolute;
+    width: 50%;
+    height: : 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.svg {
+    height: 100%;
+    width: 100%;
+    fill: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#r1 {
+    animation: wave 2s ease 0s infinite;
+}
+
+#r2 {
+    animation: wave 2s ease .1s infinite;
+}
+
+#r3 {
+    animation: wave 2s ease .2s infinite;
+}
+
+@keyframes wave {
+    0% {
+        stroke-opacity: 1;
+        width: 100%;
+        left: 0;
+    }
+    50% {
+        stroke-opacity: 0;
+        width: 150%;
+        left: -25%;
+    }
+}
+
+#mic {
+    animation: vive 4s infinite;
+}
+
+@keyframes vive {
+    0% {
+        top: 0%;
+    }
+    2% {
+        top: .5%;
+    }
+    3% {
+        top: -1%;
+    }
+    4% {
+        top: .5%;
+    }
+    5% {
+        top: -1%;
+    }
+    6% {
+        top: 0%;
+    }
+}
