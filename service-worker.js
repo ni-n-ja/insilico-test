@@ -5,19 +5,7 @@ var filesToCache = [
     '/index.html',
     '/js/app.js',
     '/css/style.css',
-    '/images/clear.png',
-    '/images/cloudy-scattered-showers.png',
-    '/images/cloudy.png',
-    '/images/fog.png',
-    '/images/ic_add_white_24px.svg',
-    '/images/ic_refresh_white_24px.svg',
-    '/images/partly-cloudy.png',
-    '/images/rain.png',
-    '/images/scattered-showers.png',
-    '/images/sleet.png',
-    '/images/snow.png',
-    '/images/thunderstorm.png',
-    '/images/wind.png'
+    '/images/clear.png'
 ];
 
 self.addEventListener('install', function(e) {
