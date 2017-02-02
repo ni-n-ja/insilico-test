@@ -2,24 +2,15 @@
     'use strict';
 
     var app = {
-        isLoading: true,
-        visibleCards: {},
-        selectedCities: [],
+        data: {}
     };
-
-    app.selectedCities = localStorage.selectedCities;
-    if (app.selectedCities) {
-        app.selectedCities = JSON.parse(app.selectedCities);
-        app.selectedCities.forEach(function(city) {
-            app.getForecast(city.key, city.label);
-        });
+    app.data = localStorage.data;
+    if (app.data) {
+        console.log(app.data);
     } else {
-        app.updateForecastCard(initialWeatherForecast);
-        app.selectedCities = [{
-            key: initialWeatherForecast.key,
-            label: initialWeatherForecast.label
-        }];
-        app.saveSelectedCities();
+        localStorage.data = JSON.stringify({
+            'no': Date.now()
+        });
     }
 
     if ('serviceWorker' in navigator) {
